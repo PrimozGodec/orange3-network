@@ -122,12 +122,15 @@ class OWNxFile(OWWidget):
 
 
         self.populate_comboboxes()
-        self.show()
+        self.reload()
+
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
         print(self.controls.label_variable.label.size())
         print(self.controls.label_variable.size())
         print(self.controls.label_variable.label.font().family())
-
-        self.reload()
+        label = self.controls.label_variable.label
+        print(label.fontMetrics().boundingRect(label.text()).width())
 
     @Inputs.items
     def set_data(self, data):
