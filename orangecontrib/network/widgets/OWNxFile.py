@@ -125,6 +125,7 @@ class OWNxFile(OWWidget):
         self.show()
         print(self.controls.label_variable.label.size())
         print(self.controls.label_variable.size())
+        print(self.controls.label_variable.label.font().family())
 
         self.reload()
 
