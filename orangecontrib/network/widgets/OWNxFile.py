@@ -127,18 +127,20 @@ class OWNxFile(OWWidget):
         print(self.controls.label_variable.size())
         print(self.controls.label_variable.label.font().family())
         print("spacing type", self.controls.label_variable.label.font().letterSpacingType())
+        print("style", self.controls.label_variable.label.font().styleName())
+        print("spacing w", self.controls.label_variable.label.font().wordSpacing())
         print("weight", self.controls.label_variable.label.font().weight())
         label = self.controls.label_variable.label
         print("real text width", label.fontMetrics().boundingRect(label.text()).width())
         self.reload()
 
-    def resizeEvent(self, event):
-        super().resizeEvent(event)
-        print(self.controls.label_variable.label.size())
-        print(self.controls.label_variable.size())
-        print(self.controls.label_variable.label.font().family())
-        label = self.controls.label_variable.label
-        print(label.fontMetrics().boundingRect(label.text()).width())
+    # def resizeEvent(self, event):
+    #     super().resizeEvent(event)
+    #     print(self.controls.label_variable.label.size())
+    #     print(self.controls.label_variable.size())
+    #     print(self.controls.label_variable.label.font().family())
+    #     label = self.controls.label_variable.label
+    #     print(label.fontMetrics().boundingRect(label.text()).width())
 
     @Inputs.items
     def set_data(self, data):
