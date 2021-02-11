@@ -126,8 +126,10 @@ class OWNxFile(OWWidget):
         print(self.controls.label_variable.label.size())
         print(self.controls.label_variable.size())
         print(self.controls.label_variable.label.font().family())
+        print("spacing type", self.controls.label_variable.label.font().letterSpacingType())
+        print("weight", self.controls.label_variable.label.font().weight())
         label = self.controls.label_variable.label
-        print("rela text width", label.fontMetrics().boundingRect(label.text()).width())
+        print("real text width", label.fontMetrics().boundingRect(label.text()).width())
         self.reload()
 
     def resizeEvent(self, event):
