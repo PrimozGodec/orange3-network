@@ -120,7 +120,12 @@ class OWNxFile(OWWidget):
             label="Match node labels to data column: ", orientation=Qt.Horizontal,
             model=self.label_model, callback=self.label_changed)
 
+
         self.populate_comboboxes()
+        self.show()
+        print(self.controls.label_variable.label.size())
+        print(self.controls.label_variable.size())
+
         self.reload()
 
     @Inputs.items
